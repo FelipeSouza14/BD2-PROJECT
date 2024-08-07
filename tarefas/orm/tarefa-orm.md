@@ -9,5 +9,7 @@ O SQLAlchemy é um dos frameworks ORM mais populares em Python. Ele oferece uma 
 Além do ORM, o SQLAlchemy inclui um conjunto de ferramentas para construção de consultas SQL e gerenciamento de transações, proporcionando uma interface robusta para acessar e manipular dados. Ele é amplamente adotado por sua capacidade de suportar uma ampla variedade de bancos de dados e sua integração com outras bibliotecas Python, tornando-o uma escolha versátil e eficaz para projetos de banco de dados em Python.
 
 # Scripts
-[ODBC]()
-[ORM]()
+[ODBC](https://github.com/FelipeSouza14/BD2-PROJECT/blob/main/tarefas/orm/script-odbc.py)
+</br>
+
+[ORM](https://github.com/FelipeSouza14/BD2-PROJECT/blob/main/tarefas/orm/script-orm.py)
