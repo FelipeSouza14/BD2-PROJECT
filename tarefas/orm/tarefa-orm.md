@@ -1,0 +1,4 @@
+# Resumo sobre ODBC
+ODBC (Open Database Connectivity) em Python oferece uma maneira padronizada de se conectar e interagir com vários bancos de dados, independentemente do sistema de gerenciamento utilizado. Utilizando bibliotecas como psycopg2, é possível acessar bancos de dados como SQL Server, PostgreSQL e MySQL através de drivers ODBC apropriados. Essa API fornece uma abordagem consistente para executar comandos SQL e gerenciar dados, o que simplifica a integração e a migração de dados entre diferentes sistemas e aplicativos. ODBC é particularmente útil quando se trabalha com diversos tipos de bancos de dados, oferecendo um método uniforme para comunicação e manipulação de dados.
+
+# Resumo sobre ORM

@@ -32,25 +32,25 @@ class Atividade(Base):
 Session = sessionmaker(bind=engine)
 session = Session()
 
-# # Inserir uma atividade em um projeto
-# nova_atividade = Atividade(
-#     nome='Atividade B',
-#     descricao='Descrição da Atividade B',
-#     data_inicio='2024-08-06',
-#     data_fim='2024-08-07',
-#     projeto_id=1
-# )
-# session.add(nova_atividade)
-# session.commit()
+# Inserir uma atividade em um projeto
+nova_atividade = Atividade(
+    nome='Atividade B',
+    descricao='Descrição da Atividade B',
+    data_inicio='2024-08-06',
+    data_fim='2024-08-07',
+    projeto_id=1
+)
+session.add(nova_atividade)
+session.commit()
 
-# # Atualizando o lider do projeto
-# projeto = session.query(Projeto).filter_by(id=1).first()
-# if projeto:
-#     projeto.lider = 'Felipe'
-#     session.commit()
-#     print("Líder atualizado com sucesso!")
-# else:
-#     print("Projeto não encontrado.")
+# Atualizando o lider do projeto
+projeto = session.query(Projeto).filter_by(id=1).first()
+if projeto:
+    projeto.lider = 'Felipe'
+    session.commit()
+    print("Líder atualizado com sucesso!")
+else:
+    print("Projeto não encontrado.")
 
 # Listar todos os projetos e suas atividades
 projetos = session.query(Projeto).all()
