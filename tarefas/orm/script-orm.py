@@ -43,11 +43,21 @@ session = Session()
 # session.add(nova_atividade)
 # session.commit()
 
-projeto = session.query(Projeto).filter_by(id=1).first()
-if projeto:
-    projeto.lider = 'Felipe'
-    session.commit()
-    print("Líder atualizado com sucesso!")
-else:
-    print("Projeto não encontrado.")
+# # Atualizando o lider do projeto
+# projeto = session.query(Projeto).filter_by(id=1).first()
+# if projeto:
+#     projeto.lider = 'Felipe'
+#     session.commit()
+#     print("Líder atualizado com sucesso!")
+# else:
+#     print("Projeto não encontrado.")
 
+# Listar todos os projetos e suas atividades
+projetos = session.query(Projeto).all()
+print("")
+print("Projetos e suas atividades:")
+print("")
+for projeto in projetos:
+    print(f"Projeto: {projeto.nome} - Líder: {projeto.lider}")
+    for atividade in projeto.atividades:
+        print(f"  Atividade: {atividade.nome} - Descrição: {atividade.descricao}")
