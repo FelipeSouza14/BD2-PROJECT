@@ -13,12 +13,22 @@ cursor = conn.cursor()
 
 
 # Inserir uma atividade em um projeto
-inserir_nova_atividade = """
-INSERT INTO atividades (nome, descricao, data_inicio, data_fim, projeto_id) 
-VALUES (%s, %s, %s, %s, %s);
-"""
-dados_nova_atividade = ('Atividade A', 'Descrição da Atividade A', '2024-08-06', '2024-08-07', 1)
-cursor.execute(inserir_nova_atividade, dados_nova_atividade)
+# inserir_nova_atividade = """
+# INSERT INTO atividades (nome, descricao, data_inicio, data_fim, projeto_id) 
+# VALUES (%s, %s, %s, %s, %s);
+# """
+# dados_nova_atividade = ('Atividade A', 'Descrição da Atividade A', '2024-08-06', '2024-08-07', 1)
+# cursor.execute(inserir_nova_atividade, dados_nova_atividade)
+
+# conn.commit()
+
+atualizar_lider = """
+    UPDATE projetos 
+    SET lider = %s 
+    WHERE id = %s;
+    """
+novo_lider = ('Benicio', 1)
+cursor.execute(atualizar_lider, novo_lider)
 
 conn.commit()
 
