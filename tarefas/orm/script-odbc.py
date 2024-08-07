@@ -22,15 +22,27 @@ cursor = conn.cursor()
 
 # conn.commit()
 
-atualizar_lider = """
-    UPDATE projetos 
-    SET lider = %s 
-    WHERE id = %s;
-    """
-novo_lider = ('Benicio', 1)
-cursor.execute(atualizar_lider, novo_lider)
+# atualizar_lider = """
+#     UPDATE projetos 
+#     SET lider = %s 
+#     WHERE id = %s;
+#     """
+# novo_lider = ('Benicio', 1)
+# cursor.execute(atualizar_lider, novo_lider)
 
-conn.commit()
+# conn.commit()
+
+cursor.execute("SELECT * FROM projetos ORDER BY id")
+
+rows = cursor.fetchall()
+for row in rows:
+    print(row)
+
+cursor.execute("SELECT * FROM atividades ORDER BY id")
+
+rows = cursor.fetchall()
+for row in rows:
+    print(row)
 
 # # Fechar a conexão
 # cursor.close()
