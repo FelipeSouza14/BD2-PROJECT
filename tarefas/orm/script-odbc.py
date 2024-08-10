@@ -33,6 +33,7 @@ cursor.execute(atualizar_lider, novo_lider)
 
 conn.commit()
 
+# Listar todos os projetos e suas atividades
 cursor.execute("SELECT * FROM projetos ORDER BY id")
 
 rows = cursor.fetchall()
